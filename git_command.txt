@@ -1,0 +1,444 @@
+PS S:\lab7_mc25bt023> git init
+>> git add .
+>> git commit -m "Initial commit"
+>> gh repo create repo-name --public --source=. --remote=origin --push
+Initialized empty Git repository in S:/lab7_mc25bt023/.git/
+On branch master
+
+Initial commit
+
+nothing to commit (create/copy files and use "git add" to track)
+`--push` enabled but no commits found in S:\lab7_mc25bt023
+PS S:\lab7_mc25bt023> git config user.name
+>> git config user.email
+shravan6926                      
+shravanpawar050407@gmail.com                                          
+PS S:\lab7_mc25bt023> git add .           
+>> git commit -m "Initial commit"
+>> gh repo create ssl_lab_7 --public --source=. --remote=origin --push
+[master (root-commit) d1bf379] Initial commit                         
+ 4 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+ create mode 100644 grading.py
+ create mode 100644 students.csv
+ create mode 100644 test_grading.py
+✓ Created repository the-shravan-6926/ssl_lab_7 on github.com
+  https://github.com/the-shravan-6926/ssl_lab_7
+✓ Added remote https://github.com/the-shravan-6926/ssl_lab_7.git
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 255 bytes | 127.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/the-shravan-6926/ssl_lab_7.git
+ * [new branch]      HEAD -> master
+branch 'master' set up to track 'origin/master'.
+✓ Pushed commits to https://github.com/the-shravan-6926/ssl_lab_7.git
+PS S:\lab7_mc25bt023> ssh -T git@github-college
+Enter passphrase for key 'C:\Users\shrav/.ssh/id_ed25519_college': 
+Hi the-shravan-6926! You've successfully authenticated, but GitHub does not provide shell access.
+PS S:\lab7_mc25bt023> git config user.name "the-shravan-6926"        
+>> git config user.email "mc25bt023@iitdh.ac.in"
+PS S:\lab7_mc25bt023> git config user.name                   
+>> git config user.email                        
+the-shravan-6926                                                      
+mc25bt023@iitdh.ac.in
+PS S:\lab7_mc25bt023> git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+        modified:   grading.py
+        modified:   students.csv
+        modified:   test_grading.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS S:\lab7_mc25bt023> git add grading.py                     
+>> git commit -m "Improve grading logic"        
+[master ec8c230] Improve grading logic                                
+ 1 file changed, 13 insertions(+)                                     
+PS S:\lab7_mc25bt023> git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/the-shravan-6926/ssl_lab_7.git'
+PS S:\lab7_mc25bt023> git push -u origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 408 bytes | 408.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/the-shravan-6926/ssl_lab_7.git
+   d1bf379..ec8c230  master -> master
+branch 'master' set up to track 'origin/master'.
+PS S:\lab7_mc25bt023> git add .
+>> git commit -m "Initial working grading system"
+[master c34f97b] Initial working grading system
+ 3 files changed, 45 insertions(+)
+PS S:\lab7_mc25bt023> git push -u origin master
+Enumerating objects: 9, done.                    
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 846 bytes | 423.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/the-shravan-6926/ssl_lab_7.git
+   ec8c230..c34f97b  master -> master
+branch 'master' set up to track 'origin/master'.
+PS S:\lab7_mc25bt023> git branch feature-grading
+>> git branch feature-report
+PS S:\lab7_mc25bt023> git switch feature-grading
+Switched to branch 'feature-grading'
+PS S:\lab7_mc25bt023> git add grading.py
+>> git commit -m "Improve grading logic"
+[feature-grading 95a8d88] Improve grading logic
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS S:\lab7_mc25bt023> git push -u origin feature-grading
+Enumerating objects: 5, done.           
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 322 bytes | 322.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'feature-grading' on GitHub by visiting:
+remote:      https://github.com/the-shravan-6926/ssl_lab_7/pull/new/feature-grading
+remote: 
+To https://github.com/the-shravan-6926/ssl_lab_7.git
+ * [new branch]      feature-grading -> feature-grading
+branch 'feature-grading' set up to track 'origin/feature-grading'.
+PS S:\lab7_mc25bt023> git switch feature-report
+Switched to branch 'feature-report'
+PS S:\lab7_mc25bt023> git switch feature-grading        
+Switched to branch 'feature-grading'             
+Your branch is up to date with 'origin/feature-grading'.
+PS S:\lab7_mc25bt023> git add grading.py
+>> git commit -m "Improve grading logic with validation"
+[feature-grading ae39a98] Improve grading logic with validation
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+PS S:\lab7_mc25bt023> git push -u origin feature-grading
+Enumerating objects: 5, done.                           
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 410 bytes | 410.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/the-shravan-6926/ssl_lab_7.git
+   95a8d88..ae39a98  feature-grading -> feature-grading
+branch 'feature-grading' set up to track 'origin/feature-grading'.
+PS S:\lab7_mc25bt023> git switch feature-report
+Switched to branch 'feature-report'
+PS S:\lab7_mc25bt023> python report.py
+Name            Marks      Grade     
+-----------------------------------
+Amit            85         A         
+Rahul           72         B         
+Priya           55         C         
+Neha            32         F         
+Karan           100        A         
+PS S:\lab7_mc25bt023> git add report.py
+>> git commit -m "Implement student grade report"
+[feature-report 420fcd0] Implement student grade report
+ 1 file changed, 25 insertions(+)
+ create mode 100644 report.py
+PS S:\lab7_mc25bt023> git push -u origin feature-report 
+Enumerating objects: 4, done.                    
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 620 bytes | 620.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'feature-report' on GitHub by visiting:
+remote:      https://github.com/the-shravan-6926/ssl_lab_7/pull/new/feature-report
+remote: 
+To https://github.com/the-shravan-6926/ssl_lab_7.git
+ * [new branch]      feature-report -> feature-report
+branch 'feature-report' set up to track 'origin/feature-report'.
+PS S:\lab7_mc25bt023> git add grading.py
+>> git commit -m "Adjust grading threshold for report"
+[feature-report bc4c9e2] Adjust grading threshold for report
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+PS S:\lab7_mc25bt023> git push -u origin feature-report
+Enumerating objects: 5, done.                         
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 336 bytes | 336.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/the-shravan-6926/ssl_lab_7.git
+   420fcd0..bc4c9e2  feature-report -> feature-report
+branch 'feature-report' set up to track 'origin/feature-report'.
+PS S:\lab7_mc25bt023> git switch feature-grading
+Switched to branch 'feature-grading'
+Your branch is up to date with 'origin/feature-grading'.
+PS S:\lab7_mc25bt023> git add grading.py
+>> git commit -m "Change A-grade threshold to 75"
+[feature-grading f7d44dc] Change A-grade threshold to 75
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS S:\lab7_mc25bt023> git push -u origin feature-grading
+Enumerating objects: 5, done.                    
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 309 bytes | 309.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/the-shravan-6926/ssl_lab_7.git
+   ae39a98..f7d44dc  feature-grading -> feature-grading
+branch 'feature-grading' set up to track 'origin/feature-grading'.
+PS S:\lab7_mc25bt023> git merge feature-report
+Auto-merging grading.py
+CONFLICT (content): Merge conflict in grading.py
+Automatic merge failed; fix conflicts and then commit the result.
+PS S:\lab7_mc25bt023> git add grading.py
+>> git commit -m "Resolve grading logic merge conflict"
+[feature-grading 20ea65a] Resolve grading logic merge conflict
+PS S:\lab7_mc25bt023> python -m unittest test_grading.py
+>> python report.py
+>> git status
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+OK
+Name            Marks      Grade     
+-----------------------------------
+Amit            85         A         
+Rahul           72         B         
+Priya           55         C         
+Neha            32         F         
+Karan           100        A         
+On branch feature-grading
+Your branch is ahead of 'origin/feature-grading' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        __pycache__/
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS S:\lab7_mc25bt023> git status
+On branch feature-grading
+Your branch is ahead of 'origin/feature-grading' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS S:\lab7_mc25bt023> git push -u origin feature-grading
+>> git push -u origin feature-report
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 340 bytes | 340.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/the-shravan-6926/ssl_lab_7.git
+   f7d44dc..20ea65a  feature-grading -> feature-grading
+branch 'feature-grading' set up to track 'origin/feature-grading'.
+branch 'feature-report' set up to track 'origin/feature-report'.
+Everything up-to-date
+PS S:\lab7_mc25bt023> git add .gitignore
+>> git commit -m "Add Python files to gitignore"
+>> git push
+[feature-grading 6ddde34] Add Python files to gitignore
+ 1 file changed, 2 insertions(+)
+ create mode 100644 .gitignore
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 313 bytes | 313.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/the-shravan-6926/ssl_lab_7.git
+   20ea65a..6ddde34  feature-grading -> feature-grading
+PS S:\lab7_mc25bt023> git switch feature-report
+>> git merge feature-grading
+>> git push
+Switched to branch 'feature-report'
+Your branch is up to date with 'origin/feature-report'.
+Updating bc4c9e2..6ddde34
+Fast-forward
+ .gitignore | 2 ++
+ grading.py | 7 +++++--
+ 2 files changed, 7 insertions(+), 2 deletions(-)
+ create mode 100644 .gitignore
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/the-shravan-6926/ssl_lab_7.git
+   bc4c9e2..6ddde34  feature-report -> feature-report
+PS S:\lab7_mc25bt023> git branch -a
+>> git log --oneline --graph --decorate --all
+  feature-grading
+* feature-report
+  master
+  remotes/origin/feature-grading
+  remotes/origin/feature-report
+  remotes/origin/master
+* 6ddde34 (HEAD -> feature-report, origin/feature-report, origin/feature-grading, feature-grading) Add Python files to gitignore
+*   20ea65a Resolve grading logic merge conflict
+|\  
+| * bc4c9e2 Adjust grading threshold for report
+| * 420fcd0 Implement student grade report
+* | f7d44dc Change A-grade threshold to 75
+* | ae39a98 Improve grading logic with validation
+* | 95a8d88 Improve grading logic
+|/  
+:
+* 6ddde34 (HEAD -> feature-report, origin/feature-report, origin/feature-grading, feature-grading) Add Python files to gitignore
+*   20ea65a Resolve grading logic merge conflict
+|\  
+| * bc4c9e2 Adjust grading threshold for report
+| * 420fcd0 Implement student grade report
+* | f7d44dc Change A-grade threshold to 75
+* | ae39a98 Improve grading logic with validation
+* | 95a8d88 Improve grading logic
+|/  
+:
+* 6ddde34 (HEAD -> feature-report, origin/feature-report, origin/feature-grading, feature-grading) Add Python files to gitignore
+*   20ea65a Resolve grading logic merge conflict
+|\  
+| * bc4c9e2 Adjust grading threshold for report
+| * 420fcd0 Implement student grade report
+* | f7d44dc Change A-grade threshold to 75
+* | ae39a98 Improve grading logic with validation
+* | 95a8d88 Improve grading logic
+|/  
+:
+
+------------------
+PS S:\lab7_mc25bt023> git switch master
+>> git status
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        __pycache__/
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS S:\lab7_mc25bt023> "__pycache__/" | Out-File -Encoding utf8 .gitignore
+>> "*.py[cod]" | Out-File -Append -Encoding utf8 .gitignore
+PS S:\lab7_mc25bt023> git add .gitignore
+>> git commit -m "Add Python gitignore"
+>> git push origin master
+[master 1c1d159] Add Python gitignore
+ 1 file changed, 2 insertions(+)
+ create mode 100644 .gitignore
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 313 bytes | 313.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/the-shravan-6926/ssl_lab_7.git
+   c34f97b..1c1d159  master -> master
+PS S:\lab7_mc25bt023> git merge feature-grading
+Auto-merging .gitignore
+CONFLICT (add/add): Merge conflict in .gitignore
+Automatic merge failed; fix conflicts and then commit the result.
+PS S:\lab7_mc25bt023> git add .gitignore
+>> git commit -m "Resolve .gitignore merge conflict"
+[master a761118] Resolve .gitignore merge conflict
+PS S:\lab7_mc25bt023> git merge feature-report
+Already up to date.
+PS S:\lab7_mc25bt023> git status
+>> git log --oneline --graph --decorate --all
+On branch master
+Your branch is ahead of 'origin/master' by 8 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+*   a761118 (HEAD -> master) Resolve .gitignore merge conflict
+|\  
+| * 6ddde34 (origin/feature-report, origin/feature-grading, feature-report, feature-grading) Add Python files to gitignore
+| *   20ea65a Resolve grading logic merge conflict
+| |\  
+| | * bc4c9e2 Adjust grading threshold for report
+| | * 420fcd0 Implement student grade report
+| * | f7d44dc Change A-grade threshold to 75
+| * | ae39a98 Improve grading logic with validation
+:
+----------------
+PS S:\lab7_mc25bt023> git push origin master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 343 bytes | 343.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/the-shravan-6926/ssl_lab_7.git
+   1c1d159..a761118  master -> master
+PS S:\lab7_mc25bt023> python -m unittest test_grading.py
+>> python report.py
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+OK
+Name            Marks      Grade     
+-----------------------------------
+Amit            85         A         
+Rahul           72         B         
+Priya           55         C         
+Neha            32         F         
+Karan           100        A         
+PS S:\lab7_mc25bt023> git add grading.py test_grading.py report.py README.md .gitignore
+>> git commit -m "Add boundary tests and finalize grading system"
+>> git push origin master
+[master 9006c76] Add boundary tests and finalize grading system
+ 1 file changed, 23 insertions(+), 9 deletions(-)
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 616 bytes | 616.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/the-shravan-6926/ssl_lab_7.git
+   a761118..9006c76  master -> master
+PS S:\lab7_mc25bt023> git log --oneline --graph --decorate --all
+>> git status
+* 9006c76 (HEAD -> master, origin/master) Add boundary tests and finalize grading system
+*   a761118 Resolve .gitignore merge conflict
+|\  
+| * 6ddde34 (origin/feature-report, origin/feature-grading, feature-report, feature-grading) Add Python files to gitignore
+| *   20ea65a Resolve grading logic merge conflict
+| |\  
+| | * bc4c9e2 Adjust grading threshold for report
+| | * 420fcd0 Implement student grade report
+| * | f7d44dc Change A-grade threshold to 75
+:
+----------------------------
+PS S:\lab7_mc25bt023> git add PART_H.md
+>> git commit -m "Document Git workflow and merge conflict"
+>> git push origin master
+[master e104cdd] Document Git workflow and merge conflict
+ 1 file changed, 36 insertions(+)
+ create mode 100644 PART_H.md
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.10 KiB | 281.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/the-shravan-6926/ssl_lab_7.git
+   9006c76..e104cdd  master -> master
+PS S:\lab7_mc25bt023> 
