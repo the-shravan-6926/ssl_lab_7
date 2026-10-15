@@ -1,9 +1,9 @@
 
 def calculate_grade(marks):
     if not 0 <= marks <= 100:
-        raise ValueError("Marks must be between 0 and 100")
+        raise ValueError("Invalid marks")
 
-    if marks >= 80:
+    if marks >= 85:
         return "A"
     elif marks >= 60:
         return "B"
